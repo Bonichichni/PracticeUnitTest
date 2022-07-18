@@ -13,10 +13,10 @@ func TestDo(t *testing.T) {
 		exp    string
 		expErr string
 	}{
-		"success":               {"a", 3, true, "[3A]", ""},
+		"success":               {"a", 8, true, "[3A]", ""},
 		"invalid int":           {"f", 9, false, "", "invalid s"},
-		"invalid char":          {"g", 12, true, "", "invalid s"},
-		"success but not upper": {"b", 3, false, "[3b]", ""},
+		"invalid char":          {"g", 13, true, "", "invalid s"},
+		"success but not upper": {"a", 13, false, "a", ""},
 	}
 	for name, tt := range testingData {
 		t.Run(name, func(t *testing.T) {
